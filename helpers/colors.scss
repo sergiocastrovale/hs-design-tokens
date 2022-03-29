@@ -1,0 +1,23 @@
+@function override-colors($color, $map) {
+  @return (
+    $color: map-merge(map-get($carbon--colors, $color), $map)
+  );
+}
+
+@mixin build-helper-classes() {
+  @each $color, $gradients in $carbon--colors {
+    @each $weight, $code in $gradients {
+      .text-#{$color}-#{$weight} {
+        color: #{$code};
+      }
+
+      .bg-#{$color}-#{$weight} {
+        background-color: #{$code};
+      }
+
+      .border-#{$color}-#{$weight} {
+        border-color: #{$code};
+      }
+    }
+  }
+}

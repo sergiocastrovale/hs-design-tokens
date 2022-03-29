@@ -1,0 +1,33 @@
+// Hubstaff colors
+//
+// Provides an extension of the base structure built by @carbon/colors
+// https://github.com/carbon-design-system/carbon/tree/main/packages/colors
+//
+// This file handles three things:
+//
+// 1) Overriding color variables directly (e.g. $blue-10)
+// 2) Overriding color gradient maps by setting them with the new variables from 1)
+// 3) Builds helper classes (text color, background color and border color).
+
+// Override colors here.
+// Variable names should match the short-version ones located in
+// @carbon/colors/scss/mixins.scss (e.g. $blue-10).
+
+$blue-10: #f00 !default;
+
+@import '@carbon/colors/scss/colors';
+@import '../helpers/colors';
+
+// Extend Carbon defaults by sending the key/list pair to `override-colors`.
+// The key should match the ones from Carbon (see @carbon/colors/scss/mixins.scss).
+
+$carbon--colors: map-merge(
+  $carbon--colors,
+  override-colors(
+    'blue', (10: $blue-10)
+  )
+);
+
+// Build helper classes
+
+@include build-helper-classes();
