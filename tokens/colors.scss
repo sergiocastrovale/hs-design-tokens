@@ -1,0 +1,18 @@
+$map: (
+  yellow-10: '#fcf4d6',
+  yellow-20: '#fddc69',
+  yellow-30: '#f1c21b',
+  yellow-40: '#d2a106',
+  yellow-50: '#b28600',
+  yellow-60: '#8e6a00',
+  yellow-70: '#684e00',
+  yellow-80: '#483700',
+  yellow-90: '#302400',
+  yellow-100: '#1c1500'
+);
+
+@each $name, $value in $map {
+  .#{$name} {
+    background-color: #{$value};
+  }
+}

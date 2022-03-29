@@ -1,0 +1,22 @@
+{
+  "name": "hubstaff-design-tokens",
+  "version": "0.1.0",
+  "description": "Hubstaff's Design System token library",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sergiocastrovale/hs-design-tokens.git"
+  },
+  "author": "Sérgio Castro",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sergiocastrovale/hs-design-tokens/issues"
+  },
+  "homepage": "https://github.com/sergiocastrovale/hs-design-tokens#readme",
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com"
+  }
+}
